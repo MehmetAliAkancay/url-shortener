@@ -6,6 +6,10 @@ const { default: ShortUniqueId } = require("short-unique-id");
 
 const router = express.Router();
 
+router.get("/shortener", (req, res) => {
+  res.json("Get isteği başarılı.");
+});
+
 router.post("/shortener", async (req, res) => {
   const { longUrl } = req.body;
   let { urlCode } = req.body;
